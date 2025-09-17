@@ -1,5 +1,6 @@
 package com.example.umc_9th_appsss
 
+import android.content.Intent
 import android.widget.TextView
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -20,6 +21,19 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val NextScreen = binding.textHappy
+
+        NextScreen.setOnClickListener {
+            // 다른 화면(SecondActivity)으로 넘어갈 Intent 객체 생성
+            // Intent(현재 컨텍스트, 이동할 액티비티 클래스)
+            val intent = Intent(this, HappyActivity::class.java)
+
+            // Intent를 실행하여 화면 전환 시작
+            startActivity(intent)
+        }
+
+
 
         setupEmotionClickListeners()
     }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Umc_9th_appsss">
         <activity
+            android:name=".HappyActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
