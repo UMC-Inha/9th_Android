@@ -143,7 +143,7 @@
             android:layout_marginTop="30dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_today_music_info_layout"
+                android:id="@+id/home_album_info_layout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -210,15 +210,15 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_today_music_album_layout"
+                android:id="@+id/home_album_layout"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_today_music_info_layout">
+                app:layout_constraintTop_toBottomOf="@id/home_album_info_layout">
 
                 <ImageView
-                    android:id="@+id/home_today_music_iv"
+                    android:id="@+id/home_album_img_iv"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -227,21 +227,21 @@
                     android:layout_marginStart="20dp"
                     android:src="@drawable/img_album_exp2"/>
                 <TextView
-                    android:id="@+id/home_today_music_title_tv"
+                    android:id="@+id/home_album_title_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/home_today_music_iv"
+                    app:layout_constraintTop_toBottomOf="@id/home_album_img_iv"
                     android:layout_marginStart="20dp"
                     android:text="라일락"
                     android:textSize="18dp"/>
 
                 <TextView
-                    android:id="@+id/home_today_music_singer_tv"
+                    android:id="@+id/home_album_singer_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/home_today_music_title_tv"
+                    app:layout_constraintTop_toBottomOf="@id/home_album_title_tv"
                     android:layout_marginStart="20dp"
                     android:text="IU"
                     android:textSize="15dp"
