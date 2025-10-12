@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.umc_flo_app.databinding.FragmentAlbumBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class AlbumFragment : Fragment() {
+    private val tabTitles = arrayListOf("수록곡", "상세정보", "영상")
 
     lateinit var binding: FragmentAlbumBinding
     private val args: AlbumFragmentArgs by navArgs()
@@ -34,5 +36,17 @@ class AlbumFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val title = args.albumTitle
+        val singer = args.albumSinger
+
+        val AlbumAdapter = AlbumSongVPAdapter(this, title, singer)
+        binding.vpAlbum.adapter = AlbumAdapter
+
+        TabLayoutMediator(binding.tblAlbumFragment, binding.vpAlbum){tab, position -> tab.text=tabTitles[position]}.attach()
     }
 }
