@@ -95,6 +95,17 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/img_album_exp2"/>
 
+    <ImageView
+        android:id="@+id/iv_like_animation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_my_like_on"
+        app:layout_constraintTop_toTopOf="@id/song_album_img_iv"
+        app:layout_constraintBottom_toBottomOf="@id/song_album_img_iv"
+        app:layout_constraintStart_toStartOf="@id/song_album_img_iv"
+        app:layout_constraintEnd_toEndOf="@id/song_album_img_iv"
+        android:visibility="gone"/>
+
     <TextView
         android:id="@+id/song_lyrics"
         android:layout_width="wrap_content"
@@ -122,6 +133,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/ic_my_like_off"/>
+        <ImageView
+            android:id="@+id/iv_song_btn_like_on"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_my_like_on"
+            android:visibility="gone"/>
         <ImageView
             android:id="@+id/song_btn_unlike_iv"
             android:layout_width="30dp"
